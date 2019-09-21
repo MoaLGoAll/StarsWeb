@@ -5,8 +5,9 @@ background-image: url("https://images.unsplash.com/photo-1534796636912-3b95b3ab5
 h1
 {
   color: white;
-  border-top: 0px;
-  margin: auto;
+  /* border-top: 0px; */
+  margin-top: 0px;
+  padding-top: 0px;
 }
 p{
   color: grey;
@@ -18,33 +19,35 @@ h2
 .TopHeader
 {
   display: flex;
+  margin-top: 0px;
   flex-direction: row;
-  height: 100px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   height: 210px;
+  position: fixed;
   font-size: 200px;
   font-family: 'Codystar', cursive;
   border: 1px solid grey;
   color: white;
   background-image: url("https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");
+/* margin-bottom: 200px; */
 }
+
 nav{
-background-color: #1a1a1a;
-border: 1px solid white;
-height: 100%; /* Full-height: remove this if you want "auto" height */
+  margin-top: 220px;
+  border: 1px solid white;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 220px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   overflow-z: hidden; /* Disable horizontal scroll */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-display: flex;
-flex-direction: column;
-height: 100%;
-align-items: start;
-
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: start;
 }
+
 
 .button{
   border: 1px solid white;
@@ -64,6 +67,7 @@ align-items: start;
   color: #f1f1f1;
 }
 /* Main Window */
+
 .main {
   border: 1px solid yellow;
   display: flex;
@@ -72,8 +76,8 @@ align-items: start;
   justify-content: center;
   margin-left: 220px; /* Same as the width of the sidebar */
   background-image: url("https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");
-  padding: 5px 10px;
-    height: 100%;
+  padding: 210px;
+  height: 100%;
 }
 .main section{
   display: flex;
@@ -86,36 +90,45 @@ align-items: start;
   padding: 30px;
   padding-top: 5px;
   border: 1px solid #666666;
-
 }
-.main2 {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 220px; /* Same as the width of the sidebar */
-  background-image: url("https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");
-  padding: 5px 10px;
-    height: 100%;
-}
-.main2 section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: black;
-  width: 80%;
 
-  margin-top: 30px;
-  padding: 30px;
-  padding-top: 5px;
-  border: 1px solid #666666;
-
-}
 img{
   width: 60%;
 }
-iframe{
+/* iframe{
   width: 100%;
   height: 1000px;
+} */
+
+
+@media (max-width: 768px) {
+
+.TopHeader{
+  height: 20px;
+  font-size: 20px;
 }
+nav{
+  margin-top: 22px;
+  width: 100%
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  z-index: 1; /* Stay on top */
+  overflow-z: hidden; /* Disable horizontal scroll */
+  flex-direction: row;
+
+  justify-content: left;
+
+}
+img{
+  display: none;
+}
+
+.main {
+  margin-left: 5px;
+    padding: 50px 10px;
+}
+  .button a {
+    font-size: 20px;
+      color: #f1f1f1;
+}
+.button a:hover {
+  color: #d9d9d9;
